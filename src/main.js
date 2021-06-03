@@ -5,12 +5,13 @@ import router from './router'
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
+import { MessageBox } from 'element-ui';
 import './assets/css/global.css'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
- 
+Vue.prototype.$confirm = MessageBox.confirm 
+
 new Vue({
   router,
   render: h => h(App)
